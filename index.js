@@ -3,6 +3,7 @@ import morgan from "morgan";
 import ConnectDB from "./config/db.js";
 import dotenv from "dotenv";
 import cors from "cors";
+import ocrRoutes from "./routes/ocrRoutes.js";
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use(
 
 app.use(express.json());
 app.use(morgan("dev"));
+
+app.use("/api/ocr",ocrRoutes)
 
 
 
