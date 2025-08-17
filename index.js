@@ -12,7 +12,7 @@ ConnectDB();
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URI || "http://localhost:3000",
+    origin: process.env.FRONTEND_URI || "http://localhost:8080",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
